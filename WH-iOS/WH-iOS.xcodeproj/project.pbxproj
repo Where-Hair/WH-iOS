@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		9F1FB0492602F9CF000C8C15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1FB0472602F9CF000C8C15 /* Main.storyboard */; };
 		9F1FB04B2602F9D3000C8C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F1FB04A2602F9D3000C8C15 /* Assets.xcassets */; };
 		9F1FB04E2602F9D3000C8C15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1FB04C2602F9D3000C8C15 /* LaunchScreen.storyboard */; };
+		9FE4A103260AE2A200D668F0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A102260AE2A200D668F0 /* UIColor.swift */; };
+		9FE4A107260AE2AB00D668F0 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A106260AE2AB00D668F0 /* TestModel.swift */; };
+		9FE4A10A260AE2B700D668F0 /* TestNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A109260AE2B700D668F0 /* TestNetworking.swift */; };
+		9FE4A10D260AE2C200D668F0 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A10C260AE2C200D668F0 /* Service.swift */; };
+		9FE4A110260AE2D300D668F0 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A10F260AE2D300D668F0 /* ViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		9F1FB04A2602F9D3000C8C15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F1FB04D2602F9D3000C8C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F1FB04F2602F9D3000C8C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FE4A102260AE2A200D668F0 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		9FE4A106260AE2AB00D668F0 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		9FE4A109260AE2B700D668F0 /* TestNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworking.swift; sourceTree = "<group>"; };
+		9FE4A10C260AE2C200D668F0 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9FE4A10F260AE2D300D668F0 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		B01D959B9065112695FE0ED9 /* Pods-WH-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WH-iOS.debug.xcconfig"; path = "Target Support Files/Pods-WH-iOS/Pods-WH-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F58EDCE79566684E70BAF006 /* Pods-WH-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WH-iOS.release.xcconfig"; path = "Target Support Files/Pods-WH-iOS/Pods-WH-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +58,6 @@
 				B01D959B9065112695FE0ED9 /* Pods-WH-iOS.debug.xcconfig */,
 				F58EDCE79566684E70BAF006 /* Pods-WH-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +90,100 @@
 		9F1FB0402602F9CF000C8C15 /* WH-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9F1FB0412602F9CF000C8C15 /* AppDelegate.swift */,
-				9F1FB0432602F9CF000C8C15 /* SceneDelegate.swift */,
-				9F1FB0452602F9CF000C8C15 /* ViewController.swift */,
-				9F1FB0472602F9CF000C8C15 /* Main.storyboard */,
-				9F1FB04A2602F9D3000C8C15 /* Assets.xcassets */,
-				9F1FB04C2602F9D3000C8C15 /* LaunchScreen.storyboard */,
-				9F1FB04F2602F9D3000C8C15 /* Info.plist */,
+				9FE4A0FA260AE21F00D668F0 /* Resource */,
+				9FE4A0F9260AE21800D668F0 /* Source */,
+				9FE4A0F7260AE1F700D668F0 /* Supporting Files */,
 			);
 			path = "WH-iOS";
+			sourceTree = "<group>";
+		};
+		9FE4A0F7260AE1F700D668F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F1FB04F2602F9D3000C8C15 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FE4A0F9260AE21800D668F0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9FE4A100260AE26600D668F0 /* Application */,
+				9FE4A101260AE27100D668F0 /* Extension */,
+				9FE4A0FF260AE26000D668F0 /* Model */,
+				9FE4A0FE260AE25500D668F0 /* Networking */,
+				9FE4A0FD260AE24900D668F0 /* Service */,
+				9FE4A0FC260AE23D00D668F0 /* ViewController */,
+				9FE4A0FB260AE23700D668F0 /* ViewModel */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		9FE4A0FA260AE21F00D668F0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9F1FB04C2602F9D3000C8C15 /* LaunchScreen.storyboard */,
+				9F1FB0472602F9CF000C8C15 /* Main.storyboard */,
+				9F1FB04A2602F9D3000C8C15 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9FE4A0FB260AE23700D668F0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9FE4A10F260AE2D300D668F0 /* ViewModelType.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9FE4A0FC260AE23D00D668F0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9F1FB0452602F9CF000C8C15 /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		9FE4A0FD260AE24900D668F0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9FE4A10C260AE2C200D668F0 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9FE4A0FE260AE25500D668F0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9FE4A109260AE2B700D668F0 /* TestNetworking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9FE4A0FF260AE26000D668F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FE4A106260AE2AB00D668F0 /* TestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FE4A100260AE26600D668F0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9F1FB0412602F9CF000C8C15 /* AppDelegate.swift */,
+				9F1FB0432602F9CF000C8C15 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9FE4A101260AE27100D668F0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9FE4A102260AE2A200D668F0 /* UIColor.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +301,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F1FB0462602F9CF000C8C15 /* ViewController.swift in Sources */,
+				9FE4A10D260AE2C200D668F0 /* Service.swift in Sources */,
+				9FE4A10A260AE2B700D668F0 /* TestNetworking.swift in Sources */,
+				9FE4A103260AE2A200D668F0 /* UIColor.swift in Sources */,
+				9FE4A110260AE2D300D668F0 /* ViewModelType.swift in Sources */,
+				9FE4A107260AE2AB00D668F0 /* TestModel.swift in Sources */,
 				9F1FB0422602F9CF000C8C15 /* AppDelegate.swift in Sources */,
 				9F1FB0442602F9CF000C8C15 /* SceneDelegate.swift in Sources */,
 			);
@@ -357,7 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "WH-iOS/Info.plist";
+				INFOPLIST_FILE = "WH-iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,7 +475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "WH-iOS/Info.plist";
+				INFOPLIST_FILE = "WH-iOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
