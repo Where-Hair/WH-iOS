@@ -10,10 +10,11 @@
 		30DDC1429E5A3233A17A39E3 /* Pods_WH_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741E15A92FEEEEAD5D3713DC /* Pods_WH_iOS.framework */; };
 		9F1FB0422602F9CF000C8C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FB0412602F9CF000C8C15 /* AppDelegate.swift */; };
 		9F1FB0442602F9CF000C8C15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FB0432602F9CF000C8C15 /* SceneDelegate.swift */; };
-		9F1FB0462602F9CF000C8C15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FB0452602F9CF000C8C15 /* ViewController.swift */; };
 		9F1FB0492602F9CF000C8C15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1FB0472602F9CF000C8C15 /* Main.storyboard */; };
 		9F1FB04B2602F9D3000C8C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F1FB04A2602F9D3000C8C15 /* Assets.xcassets */; };
 		9F1FB04E2602F9D3000C8C15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1FB04C2602F9D3000C8C15 /* LaunchScreen.storyboard */; };
+		9F840310260C94A800F6973B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84030F260C94A800F6973B /* SignInViewController.swift */; };
+		9F840313260C94B300F6973B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F840312260C94B300F6973B /* SignUpViewController.swift */; };
 		9FE4A103260AE2A200D668F0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A102260AE2A200D668F0 /* UIColor.swift */; };
 		9FE4A107260AE2AB00D668F0 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A106260AE2AB00D668F0 /* TestModel.swift */; };
 		9FE4A10A260AE2B700D668F0 /* TestNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A109260AE2B700D668F0 /* TestNetworking.swift */; };
@@ -26,11 +27,16 @@
 		9F1FB03E2602F9CF000C8C15 /* WH-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WH-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1FB0412602F9CF000C8C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F1FB0432602F9CF000C8C15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F1FB0452602F9CF000C8C15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F1FB0482602F9CF000C8C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F1FB04A2602F9D3000C8C15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F1FB04D2602F9D3000C8C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F1FB04F2602F9D3000C8C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F84030F260C94A800F6973B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9F840312260C94B300F6973B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9F840316260C9E2A00F6973B /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
+		9F840317260C9E3700F6973B /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
+		9F840318260C9E3700F6973B /* NanumSquareRoundEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundEB.ttf; sourceTree = "<group>"; };
+		9F840319260C9E3800F6973B /* NanumSquareRoundL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundL.ttf; sourceTree = "<group>"; };
 		9FE4A102260AE2A200D668F0 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		9FE4A106260AE2AB00D668F0 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		9FE4A109260AE2B700D668F0 /* TestNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworking.swift; sourceTree = "<group>"; };
@@ -97,6 +103,17 @@
 			path = "WH-iOS";
 			sourceTree = "<group>";
 		};
+		9F84031A260C9E5F00F6973B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9F840316260C9E2A00F6973B /* NanumSquareRoundB.ttf */,
+				9F840317260C9E3700F6973B /* NanumSquareRoundR.ttf */,
+				9F840319260C9E3800F6973B /* NanumSquareRoundL.ttf */,
+				9F840318260C9E3700F6973B /* NanumSquareRoundEB.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		9FE4A0F7260AE1F700D668F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +139,7 @@
 		9FE4A0FA260AE21F00D668F0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F84031A260C9E5F00F6973B /* Font */,
 				9F1FB04C2602F9D3000C8C15 /* LaunchScreen.storyboard */,
 				9F1FB0472602F9CF000C8C15 /* Main.storyboard */,
 				9F1FB04A2602F9D3000C8C15 /* Assets.xcassets */,
@@ -140,7 +158,8 @@
 		9FE4A0FC260AE23D00D668F0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9F1FB0452602F9CF000C8C15 /* ViewController.swift */,
+				9F84030F260C94A800F6973B /* SignInViewController.swift */,
+				9F840312260C94B300F6973B /* SignUpViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -300,11 +319,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F1FB0462602F9CF000C8C15 /* ViewController.swift in Sources */,
 				9FE4A10D260AE2C200D668F0 /* Service.swift in Sources */,
 				9FE4A10A260AE2B700D668F0 /* TestNetworking.swift in Sources */,
 				9FE4A103260AE2A200D668F0 /* UIColor.swift in Sources */,
+				9F840313260C94B300F6973B /* SignUpViewController.swift in Sources */,
 				9FE4A110260AE2D300D668F0 /* ViewModelType.swift in Sources */,
+				9F840310260C94A800F6973B /* SignInViewController.swift in Sources */,
 				9FE4A107260AE2AB00D668F0 /* TestModel.swift in Sources */,
 				9F1FB0422602F9CF000C8C15 /* AppDelegate.swift in Sources */,
 				9F1FB0442602F9CF000C8C15 /* SceneDelegate.swift in Sources */,
