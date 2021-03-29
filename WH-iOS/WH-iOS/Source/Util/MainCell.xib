@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MainCell" customModule="WH_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="400"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-Zx-Sgu">
+                        <rect key="frame" x="20" y="30" width="85" height="85"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="85" id="45m-X8-8qm"/>
+                            <constraint firstAttribute="width" constant="85" id="djK-Gf-CtT"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elB-mh-8RH">
+                        <rect key="frame" x="120" y="45" width="90" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="VUq-HI-jEe"/>
+                            <constraint firstAttribute="height" constant="26" id="Wf7-e2-vxg"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="가게 이름">
+                                <attributes>
+                                    <font key="NSFont" size="23" name="NanumSquareRoundB"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eD-II-rP3">
+                        <rect key="frame" x="120" y="76" width="89" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="Fco-gE-3hq"/>
+                            <constraint firstAttribute="width" constant="89" id="iDU-iF-Sjd"/>
+                        </constraints>
+                        <state key="normal">
+                            <attributedString key="attributedTitle">
+                                <fragment content="&gt; 가게 상세 정보">
+                                    <attributes>
+                                        <font key="NSFont" size="13" name="NanumSquareRoundR"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgF-87-EmC">
+                        <rect key="frame" x="20" y="142" width="350" height="19"/>
+                        <attributedString key="attributedText">
+                            <fragment content="가게 정보 가게 정보 한줄 소개 한줄 소개 가게 정보">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="NanumSquareRoundR"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mIm-iI-fub">
+                        <rect key="frame" x="20" y="182" width="350" height="192"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="elB-mh-8RH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="0n6-4P-mfq"/>
+                    <constraint firstItem="zgF-87-EmC" firstAttribute="top" secondItem="2mh-Zx-Sgu" secondAttribute="bottom" constant="27" id="15O-Br-6Vr"/>
+                    <constraint firstItem="zgF-87-EmC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Frb-Sg-xYG"/>
+                    <constraint firstItem="elB-mh-8RH" firstAttribute="leading" secondItem="2mh-Zx-Sgu" secondAttribute="trailing" constant="15" id="IS2-8L-zhh"/>
+                    <constraint firstItem="mIm-iI-fub" firstAttribute="top" secondItem="zgF-87-EmC" secondAttribute="bottom" constant="21" id="IeM-c2-N2x"/>
+                    <constraint firstItem="5eD-II-rP3" firstAttribute="top" secondItem="elB-mh-8RH" secondAttribute="bottom" constant="5" id="MU2-9f-UeU"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5eD-II-rP3" secondAttribute="trailing" constant="161" id="PWl-84-Hh4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mIm-iI-fub" secondAttribute="bottom" constant="15" id="Tpa-28-c7d"/>
+                    <constraint firstItem="2mh-Zx-Sgu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="ama-hA-NEM"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zgF-87-EmC" secondAttribute="trailing" id="c2R-XS-2kb"/>
+                    <constraint firstItem="mIm-iI-fub" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="d8d-dG-w9M"/>
+                    <constraint firstItem="mIm-iI-fub" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="nEd-eN-145"/>
+                    <constraint firstItem="2mh-Zx-Sgu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zlg-Gb-Mta"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detailBtn" destination="5eD-II-rP3" id="FtP-Al-QHu"/>
+                <outlet property="profileImage" destination="2mh-Zx-Sgu" id="uPK-R0-f1g"/>
+                <outlet property="shopImage" destination="mIm-iI-fub" id="Kt8-C0-U7f"/>
+                <outlet property="shopNameLbl" destination="elB-mh-8RH" id="I4Z-wv-faA"/>
+                <outlet property="textLbl" destination="zgF-87-EmC" id="M4W-gI-WZb"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
+        </tableViewCell>
+    </objects>
+</document>
