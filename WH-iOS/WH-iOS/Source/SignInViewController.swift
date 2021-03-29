@@ -31,14 +31,12 @@ class SignInViewController: UIViewController {
     private let idTxtField = UITextField().then {
         $0.placeholder = "id"
         $0.font = UIFont(name: "NanumSquareRoundR", size: 17)
-        $0.layer.cornerRadius = 25
-        $0.backgroundColor = .white
+        $0.underLine()
     }
     private let passwordTxtField = UITextField().then {
         $0.placeholder = "password"
         $0.font = UIFont(name: "NanumSquareRoundR", size: 17)
-        $0.layer.cornerRadius = 25
-        $0.backgroundColor = .white
+        $0.underLine()
     }
     private let signInBtn = UIButton().then {
         $0.clipsToBounds = true

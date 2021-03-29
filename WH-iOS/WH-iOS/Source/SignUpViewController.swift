@@ -36,20 +36,18 @@ class SignUpViewController: UIViewController {
     private let nicknameTxtField = UITextField().then {
         $0.placeholder = "nickname"
         $0.font = UIFont(name: "NanumSquareRoundR", size: 17)
-        $0.layer.cornerRadius = 25
-        $0.backgroundColor = .white
+        $0.underLine()
     }
     private let idTxtField = UITextField().then {
         $0.placeholder = "id"
         $0.font = UIFont(name: "NanumSquareRoundR", size: 17)
-        $0.layer.cornerRadius = 25
-        $0.backgroundColor = .white
+        $0.underLine()
+
     }
     private let passwordTxtField = UITextField().then {
         $0.placeholder = "password"
         $0.font = UIFont(name: "NanumSquareRoundR", size: 17)
-        $0.layer.cornerRadius = 25
-        $0.backgroundColor = .white
+        $0.underLine()
     }
     private let signUpBtn = UIButton().then {
         $0.clipsToBounds = true
@@ -132,7 +130,6 @@ class SignUpViewController: UIViewController {
         view.addSubview(signInBtn)
         view.addSubview(signUpBtn)
         
-        constantraint()    }
-    
-
+        constantraint()
+    }
 }
