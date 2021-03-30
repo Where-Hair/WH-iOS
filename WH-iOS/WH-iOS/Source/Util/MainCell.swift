@@ -14,6 +14,10 @@ class MainCell: UITableViewCell {
     @IBOutlet weak var detailBtn: UIButton!
     @IBOutlet weak var textLbl: UILabel!
     @IBOutlet weak var shopImage: UIImageView!
+    @IBOutlet weak var reviewBtn: UIButton!
+    @IBOutlet weak var reviewNumLbl: UILabel!
+    @IBOutlet weak var recommendBtn:UIButton!
+    @IBOutlet weak var heartBtn: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -66,30 +66,86 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mIm-iI-fub">
-                        <rect key="frame" x="20" y="182" width="350" height="192"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIm-iI-fub">
+                        <rect key="frame" x="20" y="179" width="350" height="178"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v7r-fX-69X">
+                        <rect key="frame" x="20" y="362" width="30" height="29"/>
+                        <state key="normal">
+                            <attributedString key="attributedTitle">
+                                <fragment content="리뷰">
+                                    <attributes>
+                                        <color key="NSColor" systemColor="labelColor"/>
+                                        <font key="NSFont" size="15" name="NanumSquareRoundR"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8m-w7-AJA">
+                        <rect key="frame" x="57" y="368" width="18" height="17"/>
+                        <attributedString key="attributedText">
+                            <fragment content="10">
+                                <attributes>
+                                    <font key="NSFont" size="15" name="NanumSquareRoundR"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3r-1T-djG">
+                        <rect key="frame" x="93" y="362" width="30" height="29"/>
+                        <state key="normal">
+                            <attributedString key="attributedTitle">
+                                <fragment content="추천">
+                                    <attributes>
+                                        <color key="NSColor" systemColor="labelColor"/>
+                                        <font key="NSFont" size="15" name="NanumSquareRoundR"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tar-7r-u9T">
+                        <rect key="frame" x="128" y="365" width="21" height="22"/>
+                        <color key="tintColor" red="0.80000000000000004" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" image="heart" catalog="system">
+                            <color key="titleColor" red="0.80000000000000004" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="elB-mh-8RH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="0n6-4P-mfq"/>
                     <constraint firstItem="zgF-87-EmC" firstAttribute="top" secondItem="2mh-Zx-Sgu" secondAttribute="bottom" constant="27" id="15O-Br-6Vr"/>
+                    <constraint firstItem="v3r-1T-djG" firstAttribute="leading" secondItem="C8m-w7-AJA" secondAttribute="trailing" constant="18" id="4wu-Vc-WoH"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Tar-7r-u9T" secondAttribute="bottom" constant="2" id="6Mv-t2-HAZ"/>
                     <constraint firstItem="zgF-87-EmC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Frb-Sg-xYG"/>
                     <constraint firstItem="elB-mh-8RH" firstAttribute="leading" secondItem="2mh-Zx-Sgu" secondAttribute="trailing" constant="15" id="IS2-8L-zhh"/>
-                    <constraint firstItem="mIm-iI-fub" firstAttribute="top" secondItem="zgF-87-EmC" secondAttribute="bottom" constant="21" id="IeM-c2-N2x"/>
+                    <constraint firstItem="mIm-iI-fub" firstAttribute="top" secondItem="zgF-87-EmC" secondAttribute="bottom" constant="18" id="IeM-c2-N2x"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="C8m-w7-AJA" secondAttribute="bottom" constant="4" id="JLK-H3-fZf"/>
                     <constraint firstItem="5eD-II-rP3" firstAttribute="top" secondItem="elB-mh-8RH" secondAttribute="bottom" constant="5" id="MU2-9f-UeU"/>
+                    <constraint firstAttribute="bottom" secondItem="v3r-1T-djG" secondAttribute="bottom" constant="9" id="NWJ-Y4-rHZ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="5eD-II-rP3" secondAttribute="trailing" constant="161" id="PWl-84-Hh4"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="mIm-iI-fub" secondAttribute="bottom" constant="15" id="Tpa-28-c7d"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mIm-iI-fub" secondAttribute="bottom" constant="20" id="Tpa-28-c7d"/>
+                    <constraint firstItem="Tar-7r-u9T" firstAttribute="leading" secondItem="v3r-1T-djG" secondAttribute="trailing" constant="5" id="XD3-7A-gIP"/>
                     <constraint firstItem="2mh-Zx-Sgu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="ama-hA-NEM"/>
                     <constraint firstAttribute="trailingMargin" secondItem="zgF-87-EmC" secondAttribute="trailing" id="c2R-XS-2kb"/>
                     <constraint firstItem="mIm-iI-fub" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="d8d-dG-w9M"/>
+                    <constraint firstItem="v7r-fX-69X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="k5X-RT-0Gf"/>
                     <constraint firstItem="mIm-iI-fub" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="nEd-eN-145"/>
+                    <constraint firstAttribute="bottom" secondItem="v7r-fX-69X" secondAttribute="bottom" constant="9" id="rer-Sh-3Lt"/>
+                    <constraint firstItem="C8m-w7-AJA" firstAttribute="leading" secondItem="v7r-fX-69X" secondAttribute="trailing" constant="7" id="v7b-pm-Dlh"/>
                     <constraint firstItem="2mh-Zx-Sgu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zlg-Gb-Mta"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="detailBtn" destination="5eD-II-rP3" id="FtP-Al-QHu"/>
+                <outlet property="heartBtn" destination="Tar-7r-u9T" id="vWp-kN-rZ9"/>
                 <outlet property="profileImage" destination="2mh-Zx-Sgu" id="uPK-R0-f1g"/>
+                <outlet property="recommendBtn" destination="v3r-1T-djG" id="Vxx-OY-Sfk"/>
+                <outlet property="reviewBtn" destination="v7r-fX-69X" id="vXR-gS-7CT"/>
+                <outlet property="reviewNumLbl" destination="C8m-w7-AJA" id="BBi-MO-jpc"/>
                 <outlet property="shopImage" destination="mIm-iI-fub" id="Kt8-C0-U7f"/>
                 <outlet property="shopNameLbl" destination="elB-mh-8RH" id="I4Z-wv-faA"/>
                 <outlet property="textLbl" destination="zgF-87-EmC" id="M4W-gI-WZb"/>
@@ -97,4 +153,10 @@
             <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
