@@ -14,6 +14,8 @@ import Then
 
 class PostViewController: UIViewController {
     
+    private let disposeBag = DisposeBag()
+    
     private let scrollView = UIScrollView()
     private let postView = UIView()
     private let profileImage = UIImageView().then {
@@ -99,6 +101,9 @@ class PostViewController: UIViewController {
     
 
     func constantraint() {
+        scrollView.snp.makeConstraints { (make) in
+            make.edges.equalTo(0)
+        }
         profileImage.snp.makeConstraints { (make) in
             make.centerY.equalTo(view)
             make.top.equalTo(view.frame.height/5)
@@ -182,5 +187,25 @@ class PostViewController: UIViewController {
         
     }
     
-
+    func setUI() {
+        photoBtn.rx.tap.subscribe(onNext: { _ in
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+        }).disposed(by: disposeBag)
+    }
 }
+
+extension PostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            storeImage.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
+}
+
