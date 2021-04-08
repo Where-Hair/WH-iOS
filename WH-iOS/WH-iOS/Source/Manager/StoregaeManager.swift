@@ -11,6 +11,8 @@ import Security
 
 class StoregaeManager {
     
+    static let shared = StoregaeManager()
+    
     private let account = "WhereHair"
     private let service = Bundle.main.bundleIdentifier
     
