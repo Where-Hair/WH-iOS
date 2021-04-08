@@ -14,6 +14,9 @@ import Then
 
 class SignUpViewController: UIViewController {
     
+    private let disposeBag = DisposeBag()
+    private let viewModel = SignUpViewModel()
+    
     //UI
     private let textLogo = UIImageView().then {
         $0.image = UIImage(named: "text_Logo")
@@ -60,6 +63,38 @@ class SignUpViewController: UIViewController {
         $0.setTitle("이미 계정이 있으신가요?", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = UIFont(name: "NanumSquareRoundR", size: 10)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        view.addSubview(textLogo)
+        view.addSubview(nicknameLbl)
+        view.addSubview(nicknameTxtField)
+        view.addSubview(idLbl)
+        view.addSubview(idTxtField)
+        view.addSubview(passwordLbl)
+        view.addSubview(passwordTxtField)
+        view.addSubview(signInBtn)
+        view.addSubview(signUpBtn)
+        
+        passwordTxtField.isSecureTextEntry = true
+
+        constantraint()
+    }
+    
+    //bind
+    func bindViewModel() {
+        let input = SignUpViewModel.Input(nickname: nicknameTxtField.rx.text.orEmpty.asDriver(),
+                                          id: idTxtField.rx.text.orEmpty.asDriver(),
+                                          password: passwordTxtField.rx.text.orEmpty.asDriver(),
+                                          doneTap: signUpBtn.rx.tap.asDriver())
+        let output = viewModel.transform(input: input)
+        
+        output.isEnable.drive(signUpBtn.rx.isEnabled).disposed(by: disposeBag)
+        output.result.emit(onNext: { _ in
+            self.pushVC("signInVC")
+        }).disposed(by: disposeBag)
     }
     
     //Constantraint
@@ -117,19 +152,5 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        view.addSubview(textLogo)
-        view.addSubview(nicknameLbl)
-        view.addSubview(nicknameTxtField)
-        view.addSubview(idLbl)
-        view.addSubview(idTxtField)
-        view.addSubview(passwordLbl)
-        view.addSubview(passwordTxtField)
-        view.addSubview(signInBtn)
-        view.addSubview(signUpBtn)
-        
-        constantraint()
-    }
 }
