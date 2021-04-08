@@ -16,14 +16,18 @@
 		9F84033D2611E0BD00F6973B /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84033B2611E0BD00F6973B /* MainCell.swift */; };
 		9F84033E2611E0BD00F6973B /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F84033C2611E0BD00F6973B /* MainCell.xib */; };
 		9F8403412611E99200F6973B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8403402611E99100F6973B /* UITextField.swift */; };
-		9F84035026129D6200F6973B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84034F26129D6200F6973B /* SignInViewController.swift */; };
-		9F84035426129D7300F6973B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84035326129D7300F6973B /* SignUpViewController.swift */; };
 		9F8403652613003300F6973B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8403642613003300F6973B /* Network.swift */; };
 		9F840368261301A900F6973B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F840367261301A900F6973B /* Service.swift */; };
-		9F8403872613070B00F6973B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8403862613070B00F6973B /* MainViewController.swift */; };
 		9F84038A2613076400F6973B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8403892613076400F6973B /* UIViewController.swift */; };
+		9F84048C26156B0700F6973B /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84048B26156B0700F6973B /* PostViewController.swift */; };
+		9F8404902616019D00F6973B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84048F2616019C00F6973B /* MainViewController.swift */; };
+		9F8404932616025200F6973B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8404922616025200F6973B /* SignInViewController.swift */; };
+		9F8404962616027200F6973B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8404952616027100F6973B /* SignUpViewController.swift */; };
+		9F88CEBF261E83E80081BB5C /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88CEBE261E83E80081BB5C /* TokenManager.swift */; };
+		9F88CEC4261E84350081BB5C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88CEC3261E84350081BB5C /* SignUpViewModel.swift */; };
+		9F88CED5261E9D550081BB5C /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88CED4261E9D540081BB5C /* TokenModel.swift */; };
+		9F88CED9261EA51D0081BB5C /* StoregaeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88CED8261EA51D0081BB5C /* StoregaeManager.swift */; };
 		9FE4A103260AE2A200D668F0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A102260AE2A200D668F0 /* UIColor.swift */; };
-		9FE4A107260AE2AB00D668F0 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A106260AE2AB00D668F0 /* TestModel.swift */; };
 		9FE4A10A260AE2B700D668F0 /* WhereHairAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A109260AE2B700D668F0 /* WhereHairAPI.swift */; };
 		9FE4A110260AE2D300D668F0 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE4A10F260AE2D300D668F0 /* ViewModelType.swift */; };
 /* End PBXBuildFile section */
@@ -44,14 +48,18 @@
 		9F84033B2611E0BD00F6973B /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		9F84033C2611E0BD00F6973B /* MainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
 		9F8403402611E99100F6973B /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
-		9F84034F26129D6200F6973B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		9F84035326129D7300F6973B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9F8403642613003300F6973B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		9F840367261301A900F6973B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		9F8403862613070B00F6973B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9F8403892613076400F6973B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		9F84048B26156B0700F6973B /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = ViewController/PostViewController.swift; sourceTree = "<group>"; };
+		9F84048F2616019C00F6973B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewController/MainViewController.swift; sourceTree = "<group>"; };
+		9F8404922616025200F6973B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ViewController/SignInViewController.swift; sourceTree = "<group>"; };
+		9F8404952616027100F6973B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ViewController/SignUpViewController.swift; sourceTree = "<group>"; };
+		9F88CEBE261E83E80081BB5C /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		9F88CEC3261E84350081BB5C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		9F88CED4261E9D540081BB5C /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		9F88CED8261EA51D0081BB5C /* StoregaeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoregaeManager.swift; sourceTree = "<group>"; };
 		9FE4A102260AE2A200D668F0 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		9FE4A106260AE2AB00D668F0 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		9FE4A109260AE2B700D668F0 /* WhereHairAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereHairAPI.swift; sourceTree = "<group>"; };
 		9FE4A10F260AE2D300D668F0 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		B01D959B9065112695FE0ED9 /* Pods-WH-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WH-iOS.debug.xcconfig"; path = "Target Support Files/Pods-WH-iOS/Pods-WH-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +143,15 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		9F88CEBD261E833C0081BB5C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9F88CEBE261E83E80081BB5C /* TokenManager.swift */,
+				9F88CED8261EA51D0081BB5C /* StoregaeManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		9FE4A0F7260AE1F700D668F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +163,7 @@
 		9FE4A0F9260AE21800D668F0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				9F88CEBD261E833C0081BB5C /* Manager */,
 				9F8403362611DFD200F6973B /* Util */,
 				9FE4A100260AE26600D668F0 /* Application */,
 				9FE4A101260AE27100D668F0 /* Extension */,
@@ -173,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				9FE4A10F260AE2D300D668F0 /* ViewModelType.swift */,
+				9F88CEC3261E84350081BB5C /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -180,9 +199,10 @@
 		9FE4A0FC260AE23D00D668F0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9F84034F26129D6200F6973B /* SignInViewController.swift */,
-				9F84035326129D7300F6973B /* SignUpViewController.swift */,
-				9F8403862613070B00F6973B /* MainViewController.swift */,
+				9F84048B26156B0700F6973B /* PostViewController.swift */,
+				9F84048F2616019C00F6973B /* MainViewController.swift */,
+				9F8404922616025200F6973B /* SignInViewController.swift */,
+				9F8404952616027100F6973B /* SignUpViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -207,7 +227,7 @@
 		9FE4A0FF260AE26000D668F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9FE4A106260AE2AB00D668F0 /* TestModel.swift */,
+				9F88CED4261E9D540081BB5C /* TokenModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -346,19 +366,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F88CEBF261E83E80081BB5C /* TokenManager.swift in Sources */,
+				9F88CED5261E9D550081BB5C /* TokenModel.swift in Sources */,
+				9F88CEC4261E84350081BB5C /* SignUpViewModel.swift in Sources */,
+				9F8404932616025200F6973B /* SignInViewController.swift in Sources */,
 				9F84038A2613076400F6973B /* UIViewController.swift in Sources */,
-				9F84035426129D7300F6973B /* SignUpViewController.swift in Sources */,
-				9F8403872613070B00F6973B /* MainViewController.swift in Sources */,
 				9FE4A10A260AE2B700D668F0 /* WhereHairAPI.swift in Sources */,
 				9FE4A103260AE2A200D668F0 /* UIColor.swift in Sources */,
 				9F8403412611E99200F6973B /* UITextField.swift in Sources */,
 				9F84033D2611E0BD00F6973B /* MainCell.swift in Sources */,
 				9F840368261301A900F6973B /* Service.swift in Sources */,
 				9F8403652613003300F6973B /* Network.swift in Sources */,
+				9F88CED9261EA51D0081BB5C /* StoregaeManager.swift in Sources */,
+				9F84048C26156B0700F6973B /* PostViewController.swift in Sources */,
+				9F8404962616027200F6973B /* SignUpViewController.swift in Sources */,
+				9F8404902616019D00F6973B /* MainViewController.swift in Sources */,
 				9FE4A110260AE2D300D668F0 /* ViewModelType.swift in Sources */,
-				9FE4A107260AE2AB00D668F0 /* TestModel.swift in Sources */,
 				9F1FB0422602F9CF000C8C15 /* AppDelegate.swift in Sources */,
-				9F84035026129D6200F6973B /* SignInViewController.swift in Sources */,
 				9F1FB0442602F9CF000C8C15 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
