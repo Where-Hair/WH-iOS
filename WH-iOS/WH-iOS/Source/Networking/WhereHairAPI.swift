@@ -10,7 +10,7 @@ import Moya
 
 enum WhereHairAPI {
     case signIn(_ id: String, _ password: String)
-    case signUp(_ name: String, _ id: String, _ password: String)
+    case signUp(_ nickname: String, _ id: String, _ password: String)
 }
 
 extension WhereHairAPI: TargetType {
@@ -40,10 +40,10 @@ extension WhereHairAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .signIn(let email, let password):
-            return .requestParameters(parameters: ["email": email, "password": password], encoding: JSONEncoding.prettyPrinted)
-        case .signUp(let nickname, let email, let password):
-            return .requestParameters(parameters: ["nickname": nickname,"email": email, "password": password], encoding: JSONEncoding.prettyPrinted)
+        case .signIn(let id, let password):
+            return .requestParameters(parameters: ["id": id, "password": password], encoding: JSONEncoding.prettyPrinted)
+        case .signUp(let nickname, let id, let password):
+            return .requestParameters(parameters: ["nickname": nickname,"id": id, "password": password], encoding: JSONEncoding.prettyPrinted)
         }
     }
     
