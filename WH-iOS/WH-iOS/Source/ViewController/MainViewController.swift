@@ -17,14 +17,6 @@ class MainViewController: UIViewController {
     private let mainCell = MainCell()
     private let tableView = UITableView()
     
-    func constantraint() {
-        tableView.snp.makeConstraints { (make) in
-            make.center.equalTo(view)
-            make.top.equalTo(view.frame.height)
-            make.bottom.equalTo(view.frame.height)
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,5 +26,20 @@ class MainViewController: UIViewController {
         view.addSubview(mainCell)
         
         constantraint()
+        configureTableView()
+    }
+    
+    func constantraint() {
+        tableView.snp.makeConstraints { (make) in
+            make.center.equalTo(view)
+            make.top.equalTo(view.frame.height)
+            make.bottom.equalTo(view.frame.height)
+        }
+    }
+
+    func configureTableView() {
+        let nib = UINib(nibName: "MainCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "mainCell")
+        tableView.rowHeight = 300
     }
 }
