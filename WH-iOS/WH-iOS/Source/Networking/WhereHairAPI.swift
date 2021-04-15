@@ -11,7 +11,7 @@ import Moya
 enum WhereHairAPI {
     case signIn(_ id: String, _ password: String)
     case signUp(_ nickname: String, _ id: String, _ password: String)
-    case showProfile(_ id: String)
+    case showProfile
 }
 
 extension WhereHairAPI: TargetType {
