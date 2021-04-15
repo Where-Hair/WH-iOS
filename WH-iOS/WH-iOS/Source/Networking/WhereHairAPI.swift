@@ -11,6 +11,7 @@ import Moya
 enum WhereHairAPI {
     case signIn(_ id: String, _ password: String)
     case signUp(_ nickname: String, _ id: String, _ password: String)
+    case showProfile(_ id: String)
 }
 
 extension WhereHairAPI: TargetType {
@@ -24,6 +25,8 @@ extension WhereHairAPI: TargetType {
             return "/signIn"
         case .signUp:
             return "/signUp"
+        case .showProfile:
+            return "/showProfile"
         }
     }
     
@@ -31,6 +34,8 @@ extension WhereHairAPI: TargetType {
         switch self {
         case .signIn, .signUp:
             return .post
+        case .showProfile:
+            return .get
         }
     }
     
@@ -44,6 +49,8 @@ extension WhereHairAPI: TargetType {
             return .requestParameters(parameters: ["id": id, "password": password], encoding: JSONEncoding.prettyPrinted)
         case .signUp(let nickname, let id, let password):
             return .requestParameters(parameters: ["nickname": nickname,"id": id, "password": password], encoding: JSONEncoding.prettyPrinted)
+        default:
+            return .requestPlain
         }
     }
     
@@ -51,6 +58,9 @@ extension WhereHairAPI: TargetType {
         switch self {
         case .signIn, .signUp:
             return nil
+        case .showProfile:
+            guard let token = TokenManager.currentToken?.accessToken else { return nil }
+            return ["Authorization" : "Bearer " + token]
         }
     }
 }
