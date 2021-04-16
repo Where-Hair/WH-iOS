@@ -17,7 +17,7 @@ class SignInViewModel: ViewModelType {
     struct Input {
         let id: Driver<String>
         let password: Driver<String>
-        let doneTap: Driver<String>
+        let doneTap: Driver<Void>
     }
     struct Output {
         let result: Signal<String>
