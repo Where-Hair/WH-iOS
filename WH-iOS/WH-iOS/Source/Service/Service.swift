@@ -40,6 +40,24 @@ class Service {
             .catchError { _ in return .just((nil, .fail))}
     }
     
+    func showMain() -> Observable<(MainModel?, Network)> {
+        return provider.rx.request(.showMain)
+            .filterSuccessfulStatusCodes()
+            .asObservable()
+            .map(MainModel.self)
+            .map{ return ($0, .success) }
+            .catchError{ _ in return .just((nil, .fail))}
+    }
+    
+    func detailMain() -> Observable<(DetailModel?, Network)> {
+        return provider.rx.request(.detailMain)
+            .filterSuccessfulStatusCodes()
+            .asObservable()
+            .map(DetailModel.self)
+            .map{ return ($0, .success) }
+            .catchError{ _ in return .just((nil, .fail))}
+    }
+    
     func setNetworkError(_ error: Error) -> Network {
         guard let status = (error as? MoyaError)?.response?.statusCode else { return (.fail) }
          print(error)
