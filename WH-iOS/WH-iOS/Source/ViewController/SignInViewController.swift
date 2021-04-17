@@ -14,6 +14,9 @@ import Then
 
 class SignInViewController: UIViewController {
     
+    private let disposeBag = DisposeBag()
+    private let viewModel = SignInViewModel()
+    
     //UI
     private let textLogo =  UIImageView().then{
         $0.image = UIImage(named: "text_Logo")
@@ -49,6 +52,32 @@ class SignInViewController: UIViewController {
         $0.setTitle("아직 계정이 없으신가요?", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = UIFont(name: "NanumSquareRoundR", size: 10)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.addSubview(textLogo)
+        view.addSubview(idLbl)
+        view.addSubview(idTxtField)
+        view.addSubview(passwordLbl)
+        view.addSubview(passwordTxtField)
+        view.addSubview(signInBtn)
+        view.addSubview(signUpBtn)
+        
+        constraint()
+    }
+    
+    func bindViewModel() {
+        let input = SignInViewModel.Input(id: idTxtField.rx.text.orEmpty.asDriver(),
+                                          password: passwordTxtField.rx.text.orEmpty.asDriver(),
+                                          doneTap: signInBtn.rx.tap.asDriver())
+        let output = viewModel.transform(input: input)
+        
+        output.isEnalbe.drive(signInBtn.rx.isEnabled).disposed(by: disposeBag)
+        output.result.emit(onNext: { _ in
+            self.pushVC("mainVC")
+        }).disposed(by: disposeBag)
     }
     
     func constraint() {
@@ -94,17 +123,4 @@ class SignInViewController: UIViewController {
 
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.addSubview(textLogo)
-        view.addSubview(idLbl)
-        view.addSubview(idTxtField)
-        view.addSubview(passwordLbl)
-        view.addSubview(passwordTxtField)
-        view.addSubview(signInBtn)
-        view.addSubview(signUpBtn)
-        
-        constraint()
-    }
 }
