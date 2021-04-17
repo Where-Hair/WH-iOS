@@ -10,7 +10,7 @@ import Foundation
 struct MainModel: Codable {
     let profileImage: String
     let name: String
-    let content: String
+    let introduce: String
     let shopImage: String
     let review: String
     let isHeart: Bool
@@ -19,7 +19,8 @@ struct MainModel: Codable {
 struct DetailModel: Codable {
     let profileImage: String
     let name: String
-    let content: String
+    let introduce: String
+    let information: String
     let shopImage: String
     let review: String
     let isHeart: Bool
