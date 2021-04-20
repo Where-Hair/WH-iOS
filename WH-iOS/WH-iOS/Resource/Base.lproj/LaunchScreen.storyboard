@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,10 +13,53 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WH_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Gv1-WV-CdH">
+                                <rect key="frame" x="73" y="286" width="268" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="uA8-Uz-T7S"/>
+                                    <constraint firstAttribute="width" constant="268" id="zZb-TQ-uEk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-RG-jWb">
+                                <rect key="frame" x="59" y="459" width="296" height="27"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="당신의 미용실을 찾아드립니다">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="NanumSquareRoundR"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nau-rw-1N9">
+                                <rect key="frame" x="175" y="519" width="64" height="39"/>
+                                <color key="tintColor" red="0.80000000000000004" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="웨헤">
+                                        <attributes>
+                                            <color key="NSColor" red="0.93374425169999997" green="0.82059043649999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="35" name="NanumSquareRoundEB"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" red="0.80000000000000004" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MUT-RG-jWb" firstAttribute="top" secondItem="Gv1-WV-CdH" secondAttribute="bottom" constant="45" id="1mW-Pe-34P"/>
+                            <constraint firstItem="Gv1-WV-CdH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MaC-sE-9hX"/>
+                            <constraint firstItem="Nau-rw-1N9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="aMI-dT-tjX"/>
+                            <constraint firstItem="Gv1-WV-CdH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="242" id="pCD-u8-SkQ"/>
+                            <constraint firstItem="Nau-rw-1N9" firstAttribute="top" secondItem="MUT-RG-jWb" secondAttribute="bottom" constant="33" id="uA5-ht-Xs6"/>
+                            <constraint firstItem="MUT-RG-jWb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uY7-T2-dHH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -22,4 +67,10 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="WH_Logo" width="268" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
