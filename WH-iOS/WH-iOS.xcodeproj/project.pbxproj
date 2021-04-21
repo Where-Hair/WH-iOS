@@ -19,6 +19,7 @@
 		9F6BEBAF26284300000BC386 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6BEBAE262842FF000BC386 /* MainViewModel.swift */; };
 		9F6BEBB226284688000BC386 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6BEBB126284688000BC386 /* MainModel.swift */; };
 		9F6BEBD6262EADDD000BC386 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6BEBD5262EADDC000BC386 /* DetailViewController.swift */; };
+		9F8311D0262EEF20005B484E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8311CF262EEF20005B484E /* DetailViewModel.swift */; };
 		9F84033D2611E0BD00F6973B /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84033B2611E0BD00F6973B /* MainCell.swift */; };
 		9F84033E2611E0BD00F6973B /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F84033C2611E0BD00F6973B /* MainCell.xib */; };
 		9F8403412611E99200F6973B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8403402611E99100F6973B /* UITextField.swift */; };
@@ -54,6 +55,7 @@
 		9F6BEBAE262842FF000BC386 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9F6BEBB126284688000BC386 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		9F6BEBD5262EADDC000BC386 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9F8311CF262EEF20005B484E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		9F840316260C9E2A00F6973B /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
 		9F840317260C9E3700F6973B /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
 		9F840318260C9E3700F6973B /* NanumSquareRoundEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundEB.ttf; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				9F88CF2C2625B2840081BB5C /* SignInViewModel.swift */,
 				9F6BEBA52627D669000BC386 /* ProfileViewModel.swift */,
 				9F6BEBAE262842FF000BC386 /* MainViewModel.swift */,
+				9F8311CF262EEF20005B484E /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				9F84038A2613076400F6973B /* UIViewController.swift in Sources */,
 				9F6BEBAC2627DE17000BC386 /* ProfileViewController.swift in Sources */,
 				9FE4A10A260AE2B700D668F0 /* WhereHairAPI.swift in Sources */,
+				9F8311D0262EEF20005B484E /* DetailViewModel.swift in Sources */,
 				9F6BEBB226284688000BC386 /* MainModel.swift in Sources */,
 				9FE4A103260AE2A200D668F0 /* UIColor.swift in Sources */,
 				9F8403412611E99200F6973B /* UITextField.swift in Sources */,

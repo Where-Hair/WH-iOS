@@ -16,47 +16,30 @@ class MainViewModel: ViewModelType {
     
     struct Input {
         let loadData: Signal<Void>
-        let loadDetail: Signal<Void>
-       // let selectIndexPath: Signal<Int>
     }
     struct Output {
         let result: Signal<String>
         let loadData: BehaviorRelay<[MainModel]>
-        let loadDetail: BehaviorRelay<[MainModel]>
     }
     
     func transform(input: Input) -> Output {
         let api = Service()
         let result = PublishSubject<String>()
-        let loadDetail = BehaviorRelay<[MainModel]>(value: [])
         let loadData = BehaviorRelay<[MainModel]>(value: [])
         
-        input.loadData.asObservable()
-            .flatMap{_ in api.showMain()}
-            .subscribe(onNext:  { _, response in
+        input.loadData.asObservable().subscribe(onNext: { _ in
+            api.showMain().asObservable().subscribe(onNext: { _ ,response in
                 switch response {
                 case .success:
                     result.onCompleted()
                 case .forbidden:
                     result.onNext("forbidden")
                 default:
-                    print("default")
+                    print("main default")
                 }
-            }).disposed(by: disposeBag)
+            }).disposed(by: self.disposeBag)
+        }).disposed(by: disposeBag)
         
-        input.loadDetail.asObservable()
-            .flatMap{ _ in api.detailMain()}
-            .subscribe(onNext: { _, response in
-                switch response {
-                case .success:
-                    result.onCompleted()
-                case .conflict:
-                    result.onNext("conflict")
-                default:
-                    print("default")
-                }
-            }).disposed(by: disposeBag)
-        
-        return Output(result:result.asSignal(onErrorJustReturn: ""), loadData: loadData, loadDetail: loadDetail)
+        return Output(result:result.asSignal(onErrorJustReturn: ""), loadData: loadData)
     }
 }
