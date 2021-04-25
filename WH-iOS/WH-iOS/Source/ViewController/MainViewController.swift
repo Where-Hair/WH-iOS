@@ -14,6 +14,13 @@ import Then
 
 class MainViewController: UIViewController {
     
+    private let disposeBag = DisposeBag()
+    private let viewModel = MainViewModel()
+    
+    private let loadData = BehaviorRelay<Void>(value: ())
+    private let loadDetail = BehaviorRelay<Void>(value: ())
+    var selectIndexPath = PublishRelay<Int>()
+    
     private let mainCell = MainCell()
     private let tableView = UITableView()
     
@@ -28,6 +35,23 @@ class MainViewController: UIViewController {
         constantraint()
         configureTableView()
     }
+    
+    func bindViewModel() {
+        let input = MainViewModel.Input(loadData: loadData.asSignal(onErrorJustReturn: ()))
+        let output = viewModel.transform(input: input)
+        
+        output.loadData.bind(to: tableView.rx.items(cellIdentifier: "mainCell", cellType: MainCell.self)) { (row, element, cell) in
+            cell.profileImage.image = UIImage(named: element.profileImage)
+            cell.shopNameLbl.text = element.name
+            cell.textLbl.text = element.introduce
+            
+            cell.heartBtn.rx.tap.subscribe(onNext: { _ in
+                self.selectIndexPath.accept(row)
+            }).disposed(by: self.disposeBag)
+        }.disposed(by: disposeBag)
+    
+    }
+    
     
     func constantraint() {
         tableView.snp.makeConstraints { (make) in
