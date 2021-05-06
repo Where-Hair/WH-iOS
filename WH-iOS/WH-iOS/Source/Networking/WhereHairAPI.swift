@@ -14,6 +14,7 @@ enum WhereHairAPI {
     case showProfile
     case showMain
     case detailMain
+    case post(_ name: String, _ location: String, _ introduce: String, _ informaion: String, _ img: Data)
 }
 
 extension WhereHairAPI: TargetType {
@@ -33,12 +34,14 @@ extension WhereHairAPI: TargetType {
             return "/showMain"
         case .detailMain:
             return "/detailMain"
+        case .post:
+            return "/write"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .signIn, .signUp:
+        case .signIn, .signUp, .post:
             return .post
         case .showProfile, .showMain, .detailMain:
             return .get
@@ -55,6 +58,8 @@ extension WhereHairAPI: TargetType {
             return .requestParameters(parameters: ["id": id, "password": password], encoding: JSONEncoding.prettyPrinted)
         case .signUp(let nickname, let id, let password):
             return .requestParameters(parameters: ["nickname": nickname,"id": id, "password": password], encoding: JSONEncoding.prettyPrinted)
+        case .post(let name, let location, let introduce, let information, let img):
+            return .uploadMultipart([Moya.MultipartFormData(provider: .data(img ?? Data()), name: "image", fileName: "image.jpg", mimeType: "image/jpg")])
         default:
             return .requestPlain
         }
@@ -64,7 +69,7 @@ extension WhereHairAPI: TargetType {
         switch self {
         case .signIn, .signUp:
             return nil
-        case .showProfile,.showMain, .detailMain:
+        case .showProfile,.showMain, .detailMain, .post:
             guard let token = TokenManager.currentToken?.accessToken else { return nil }
             return ["Authorization" : "Bearer " + token]
         }
