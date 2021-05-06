@@ -20,6 +20,8 @@
 		9F8311D0262EEF20005B484E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8311CF262EEF20005B484E /* DetailViewModel.swift */; };
 		9F8311D9262FF2EF005B484E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8311D8262FF2EF005B484E /* DetailViewController.swift */; };
 		9F8311DC262FF31B005B484E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8311DB262FF31B005B484E /* ProfileViewController.swift */; };
+		9F839B2C26437AE50062089C /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F839B2A26437AE50062089C /* DetailCell.swift */; };
+		9F839B2D26437AE50062089C /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F839B2B26437AE50062089C /* DetailCell.xib */; };
 		9F84033D2611E0BD00F6973B /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84033B2611E0BD00F6973B /* MainCell.swift */; };
 		9F84033E2611E0BD00F6973B /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F84033C2611E0BD00F6973B /* MainCell.xib */; };
 		9F8403412611E99200F6973B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8403402611E99100F6973B /* UITextField.swift */; };
@@ -56,6 +58,8 @@
 		9F8311CF262EEF20005B484E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		9F8311D8262FF2EF005B484E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ViewController/DetailViewController.swift; sourceTree = "<group>"; };
 		9F8311DB262FF31B005B484E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ViewController/ProfileViewController.swift; sourceTree = "<group>"; };
+		9F839B2A26437AE50062089C /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		9F839B2B26437AE50062089C /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		9F840316260C9E2A00F6973B /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
 		9F840317260C9E3700F6973B /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
 		9F840318260C9E3700F6973B /* NanumSquareRoundEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundEB.ttf; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 			children = (
 				9F84033B2611E0BD00F6973B /* MainCell.swift */,
 				9F84033C2611E0BD00F6973B /* MainCell.xib */,
+				9F839B2A26437AE50062089C /* DetailCell.swift */,
+				9F839B2B26437AE50062089C /* DetailCell.xib */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				9F1FB04B2602F9D3000C8C15 /* Assets.xcassets in Resources */,
 				9F84033E2611E0BD00F6973B /* MainCell.xib in Resources */,
 				9F1FB0492602F9CF000C8C15 /* Main.storyboard in Resources */,
+				9F839B2D26437AE50062089C /* DetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +408,7 @@
 				9F8311D0262EEF20005B484E /* DetailViewModel.swift in Sources */,
 				9F6BEBB226284688000BC386 /* MainModel.swift in Sources */,
 				9F8311DC262FF31B005B484E /* ProfileViewController.swift in Sources */,
+				9F839B2C26437AE50062089C /* DetailCell.swift in Sources */,
 				9FE4A103260AE2A200D668F0 /* UIColor.swift in Sources */,
 				9F8403412611E99200F6973B /* UITextField.swift in Sources */,
 				9F84033D2611E0BD00F6973B /* MainCell.swift in Sources */,
