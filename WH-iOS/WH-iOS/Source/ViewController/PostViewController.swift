@@ -16,6 +16,9 @@ import KMPlaceholderTextView
 class PostViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
+    private let viewModel = PostViewModel()
+    
+    private let postImage = BehaviorRelay<Data?>(value: nil)
     
     @IBOutlet weak var storeNameLbl: UILabel!
     @IBOutlet weak var storeNameTxtField: UITextField!
@@ -44,6 +47,23 @@ class PostViewController: UIViewController {
             imagePicker.sourceType = .photoLibrary
             self.present(imagePicker, animated: true, completion: nil)
         }).disposed(by: disposeBag)
+    }
+    
+    func bindViewModel() {
+        let input = PostViewModel.Input(isName: storeNameTxtField.rx.text.orEmpty.asDriver(),
+                                        isLocation: locationTxtField.rx.text.orEmpty.asDriver(),
+                                        isIntroduce: introduceTxtField.rx.text.orEmpty.asDriver(),
+                                        isInformation: descriptionTxtView.rx.text.orEmpty.asDriver(),
+                                        isImg: postImage.asDriver(onErrorJustReturn: nil),
+                                        postTap: addBtn.rx.tap.asDriver())
+        let output = viewModel.transform(input: input)
+        
+        output.result.emit(onCompleted: {[unowned self] in
+            pushVC("mainVC")
+        }).disposed(by: disposeBag)
+        
+        output.isEnable.drive(addBtn.rx.isEnabled).disposed(by: disposeBag)
+
     }
 
 }
