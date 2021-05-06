@@ -21,20 +21,19 @@ class MainViewController: UIViewController {
     private let loadDetail = BehaviorRelay<Void>(value: ())
     var selectIndexPath = PublishRelay<Int>()
     
-    private let mainCell = MainCell()
-    private let tableView = UITableView()
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        view.addSubview(tableView)
-        view.addSubview(mainCell)
-        
-        constantraint()
         configureTableView()
+        bindViewModel()
     }
+    
     
     func bindViewModel() {
         let input = MainViewModel.Input(loadData: loadData.asSignal(onErrorJustReturn: ()))
@@ -51,19 +50,10 @@ class MainViewController: UIViewController {
         }.disposed(by: disposeBag)
     
     }
-    
-    
-    func constantraint() {
-        tableView.snp.makeConstraints { (make) in
-            make.center.equalTo(view)
-            make.top.equalTo(view.frame.height)
-            make.bottom.equalTo(view.frame.height)
-        }
-    }
 
     func configureTableView() {
         let nib = UINib(nibName: "MainCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "mainCell")
-        tableView.rowHeight = 300
+        tableView.rowHeight = 220
     }
 }
