@@ -4,6 +4,7 @@ PODS:
   - Kingfisher (5.15.6):
     - Kingfisher/Core (= 5.15.6)
   - Kingfisher/Core (5.15.6)
+  - KMPlaceholderTextView (1.4.0)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -28,6 +29,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - Kingfisher (~> 5.0)
+  - KMPlaceholderTextView (~> 1.4.0)
   - Moya (~> 14.0)
   - Moya/RxSwift (~> 14.0)
   - RxCocoa (~> 5)
@@ -42,6 +44,7 @@ SPEC REPOS:
     - Alamofire
     - Differentiator
     - Kingfisher
+    - KMPlaceholderTextView
     - Moya
     - RxCocoa
     - RxDataSources
@@ -55,6 +58,7 @@ SPEC CHECKSUMS:
   Alamofire: 2c792affbdc2f18016e08fdbcacd60aebe1ba593
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Kingfisher: b3554e7bf6106115b44e8795300bad580ef2fdc7
+  KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
@@ -64,6 +68,6 @@ SPEC CHECKSUMS:
   SOTabBar: 27aea95bd6b39d1be3535c867a2cd3b5adc172e6
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: b6160f58db03efeaa0735e9e802be5c5efd8de63
+PODFILE CHECKSUM: d213e8b9a10aeb417163159040a0a10d3901db97
 
 COCOAPODS: 1.10.0
