@@ -66,7 +66,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3V-nw-maP">
-                        <rect key="frame" x="20" y="127" width="374" height="34"/>
+                        <rect key="frame" x="20" y="127" width="374" height="33.5"/>
                         <attributedString key="attributedText">
                             <fragment content="한줄 소개 한줄 소개">
                                 <attributes>
@@ -84,7 +84,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbx-Sd-gC7">
-                        <rect key="frame" x="20" y="181" width="374" height="166"/>
+                        <rect key="frame" x="20" y="180.5" width="374" height="166"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <attributedString key="attributedText">
                             <fragment>
@@ -119,6 +119,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLbl" destination="nbx-Sd-gC7" id="38L-B4-prT"/>
+                <outlet property="heartLbl" destination="I1B-Oy-2T4" id="Nb0-LZ-912"/>
+                <outlet property="heartNumLbl" destination="cTE-Wc-wus" id="TLV-to-sWJ"/>
+                <outlet property="introduceLbl" destination="J3V-nw-maP" id="oKY-vT-bJh"/>
+                <outlet property="profileImage" destination="sjK-3x-oOK" id="MJ7-5s-LEV"/>
+                <outlet property="shopImage" destination="ZxK-jM-PQq" id="6px-23-cHr"/>
+                <outlet property="shopNameLbl" destination="ZBe-DC-Pyx" id="yla-Dw-I4U"/>
+            </connections>
             <point key="canvasLocation" x="155.07246376811597" y="-138.61607142857142"/>
         </tableViewCell>
     </objects>
