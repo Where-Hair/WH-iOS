@@ -22,6 +22,8 @@
 		9F8311DC262FF31B005B484E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8311DB262FF31B005B484E /* ProfileViewController.swift */; };
 		9F839B2C26437AE50062089C /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F839B2A26437AE50062089C /* DetailCell.swift */; };
 		9F839B2D26437AE50062089C /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F839B2B26437AE50062089C /* DetailCell.xib */; };
+		9F839B2F2643D57D0062089C /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F839B2E2643D57C0062089C /* PostViewModel.swift */; };
+		9F839B312643D5AD0062089C /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F839B302643D5AD0062089C /* PostModel.swift */; };
 		9F84033D2611E0BD00F6973B /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84033B2611E0BD00F6973B /* MainCell.swift */; };
 		9F84033E2611E0BD00F6973B /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F84033C2611E0BD00F6973B /* MainCell.xib */; };
 		9F8403412611E99200F6973B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8403402611E99100F6973B /* UITextField.swift */; };
@@ -60,6 +62,8 @@
 		9F8311DB262FF31B005B484E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ViewController/ProfileViewController.swift; sourceTree = "<group>"; };
 		9F839B2A26437AE50062089C /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		9F839B2B26437AE50062089C /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
+		9F839B2E2643D57C0062089C /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		9F839B302643D5AD0062089C /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		9F840316260C9E2A00F6973B /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundB.ttf; sourceTree = "<group>"; };
 		9F840317260C9E3700F6973B /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
 		9F840318260C9E3700F6973B /* NanumSquareRoundEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundEB.ttf; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 				9F6BEBA52627D669000BC386 /* ProfileViewModel.swift */,
 				9F6BEBAE262842FF000BC386 /* MainViewModel.swift */,
 				9F8311CF262EEF20005B484E /* DetailViewModel.swift */,
+				9F839B2E2643D57C0062089C /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				9F88CED4261E9D540081BB5C /* TokenModel.swift */,
 				9F6BEBA82627D73E000BC386 /* ProfileModel.swift */,
 				9F6BEBB126284688000BC386 /* MainModel.swift */,
+				9F839B302643D5AD0062089C /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,9 +411,11 @@
 				9F8404932616025200F6973B /* SignInViewController.swift in Sources */,
 				9F84038A2613076400F6973B /* UIViewController.swift in Sources */,
 				9FE4A10A260AE2B700D668F0 /* WhereHairAPI.swift in Sources */,
+				9F839B2F2643D57D0062089C /* PostViewModel.swift in Sources */,
 				9F8311D0262EEF20005B484E /* DetailViewModel.swift in Sources */,
 				9F6BEBB226284688000BC386 /* MainModel.swift in Sources */,
 				9F8311DC262FF31B005B484E /* ProfileViewController.swift in Sources */,
+				9F839B312643D5AD0062089C /* PostModel.swift in Sources */,
 				9F839B2C26437AE50062089C /* DetailCell.swift in Sources */,
 				9FE4A103260AE2A200D668F0 /* UIColor.swift in Sources */,
 				9F8403412611E99200F6973B /* UITextField.swift in Sources */,
