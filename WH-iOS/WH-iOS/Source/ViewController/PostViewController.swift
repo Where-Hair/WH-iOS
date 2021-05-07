@@ -47,6 +47,12 @@ class PostViewController: UIViewController {
             imagePicker.sourceType = .photoLibrary
             self.present(imagePicker, animated: true, completion: nil)
         }).disposed(by: disposeBag)
+        
+        addBtn.rx.tap.subscribe(onNext: { _ in
+            self.alert("성공", "등록되었습니다❗️")
+        }).disposed(by: disposeBag)
+        
+        addBtn.layer.cornerRadius = 15
     }
     
     func bindViewModel() {
