@@ -14,7 +14,7 @@ enum WhereHairAPI {
     case showProfile
     case showMain
     case detailMain
-    case post(_ name: String, _ location: String, _ introduce: String, _ informaion: String, _ img: Data)
+    case post(_ name: String, _ location: String, _ introduce: String, _ informaion: String, _ img: Data?)
 }
 
 extension WhereHairAPI: TargetType {
