@@ -33,7 +33,23 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         passwordTxtField.isSecureTextEntry = true
+        
+        setUI()
 
+    }
+    
+    func setUI() {
+        signUpBtn.rx.tap.subscribe(onNext: { _ in
+            self.pushVC("signInVC")
+        })
+        signInBtn.rx.tap.subscribe(onNext: { _ in
+            self.pushVC("signInVC")
+        })
+        
+        signUpBtn.layer.cornerRadius = 15
+        nicknameTxtField.underLine()
+        idTxtField.underLine()
+        passwordTxtField.underLine()
     }
     
     //bind
@@ -46,7 +62,7 @@ class SignUpViewController: UIViewController {
         
         output.isEnable.drive(signUpBtn.rx.isEnabled).disposed(by: disposeBag)
         output.result.emit(onNext: { _ in
-            self.pushVC("signInVC")
+            self.pushVC("mainVC")
         }).disposed(by: disposeBag)
     }
     
