@@ -29,10 +29,17 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwordTxtField.isSecureTextEntry = true
 
         bindViewModel()
-
+        setUI()
+    }
+    
+    func setUI() {
+        passwordTxtField.isSecureTextEntry = true
+        signInBtn.layer.cornerRadius = 15
+        signInBtn.setTitleColor(UIColor.white, for: .normal)
+        idTxtField.underLine()
+        passwordTxtField.underLine()
     }
     
     func bindViewModel() {
