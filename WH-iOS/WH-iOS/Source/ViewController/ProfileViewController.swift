@@ -14,53 +14,45 @@ import Then
 
 class ProfileViewController: UIViewController {
     
-    private let profileImage = UIImageView().then {
-        $0.clipsToBounds = true
-        $0.image = UIImage(named: "profile")
-    }
-    private let nickNameLbl = UILabel().then {
-        $0.text = "닉네임"
-    }
-    private let changeBtn = UIButton().then {
-        $0.setTitle("변경하기", for: .normal)
-        $0.setTitleColor(.mainColor, for: .normal)
-        $0.titleLabel?.font = UIFont(name: "NanumSquareRoundR", size: 25)
-    }
+    private let disposeBag = DisposeBag()
     
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileBtn: UIButton!
+    @IBOutlet weak var nicknameLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.addSubview(profileImage)
-        view.addSubview(nickNameLbl)
-        view.addSubview(changeBtn)
-        
-        constantraint()
+ 
         setUI()
     }
     
     func setUI() {
         profileImage.layer.borderColor = UIColor.black.cgColor
+        profileImage.clipsToBounds = true
+        
+        profileBtn.rx.tap.subscribe(onNext: { _ in
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+        }).disposed(by: disposeBag)
     }
     
-    private func constantraint() {
-        profileImage.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view)
-            make.top.equalTo(view.frame.height/5)
-            make.width.height.equalTo(150)
-        }
-        nickNameLbl.snp.makeConstraints { (make) in
-            make.center.equalTo(view)
-            make.top.equalTo(profileImage.snp.bottom).offset(14)
-            make.height.equalTo(45)
-        }
-        changeBtn.snp.makeConstraints { (make) in
-            make.centerX.equalTo(view)
-            make.top.equalTo(nickNameLbl.snp.bottom).offset(45)
-            make.leading.equalTo(50)
-            make.trailing.equalTo(-50)
-        }
+    func bindViewModel() {
+        
     }
     
+}
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            profileImage.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
 
