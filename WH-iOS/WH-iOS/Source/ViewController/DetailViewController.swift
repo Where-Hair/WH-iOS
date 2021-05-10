@@ -9,82 +9,51 @@ import UIKit
 
 import RxSwift
 import RxCocoa
-import SnapKit
-import Then
 
 class DetailViewController: UIViewController {
     
-    private let profileImage = UIImageView().then {
-        $0.clipsToBounds = true
-        $0.layer.borderColor = UIColor.black.cgColor
-        $0.image = UIImage(named: "WH_Logo")
-    }
-    private let shopName = UILabel().then {
-        $0.textColor = .black
-        $0.font = UIFont(name: "NanumSquareRoundR", size: 23)
-    }
-    private let heartLbl = UILabel().then {
-        $0.text = "추천"
-        $0.textColor = .mainColor
-        $0.font = UIFont(name: "NanumSquareRoundR", size: 12)
-    }
-    private let heartNumLbl = UILabel().then {
-        $0.textColor = .black
-        $0.font = UIFont(name: "NanumSquareRoundR", size: 12)
-    }
-    private let introduceLbl = UILabel().then {
-        $0.textColor = .black
-        $0.font = UIFont(name: "NanumSquareRoundR", size: 15)
-    }
-    private let detailLbl = UILabel().then {
-        $0.textColor = .black
-        $0.font = UIFont(name: "NanumSquareRoundR", size: 15)
-    }
-    private let shopImage = UIImageView()
+    private let disposeBag = DisposeBag()
+    private let viewModel = DetailViewModel()
+    
+    private let loadData = BehaviorRelay<Void>(value: ())
+    
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(profileImage)
-        view.addSubview(shopName)
-        view.addSubview(heartLbl)
-        view.addSubview(heartNumLbl)
-        view.addSubview(introduceLbl)
-        view.addSubview(detailLbl)
-        view.addSubview(shopImage)
+        setUI()
+        configureTableView()
     }
     
-    func constantraint() {
-        profileImage.snp.makeConstraints { (make) in
-            make.top.equalTo(view.frame.height/15)
-            make.leading.equalTo(30)
-        }
-        shopName.snp.makeConstraints{ (make) in
-            make.top.equalTo(view.frame.height/15)
-            make.leading.equalTo(profileImage.snp.trailing).offset(20)
-            make.trailing.equalTo(-30)
-        }
-        heartLbl.snp.makeConstraints{ (make) in
-            make.top.equalTo(shopName.snp.bottom).offset(20)
-            make.leading.equalTo(profileImage.snp.trailing).offset(20)
-        }
-        heartNumLbl.snp.makeConstraints{ (make) in
-            make.top.equalTo(shopName.snp.bottom).offset(20)
-            make.leading.equalTo(heartLbl.snp.trailing).offset(15)
-            make.trailing.equalTo(-130)
-        }
-        introduceLbl.snp.makeConstraints{ (make) in
-            make.top.equalTo(profileImage.snp.bottom).offset(25)
-            make.leading.equalTo(30)
-            make.trailing.equalTo(-30)
-        }
-        detailLbl.snp.makeConstraints{ (make) in
-            make.top.equalTo(introduceLbl.snp.bottom).offset(25)
-            make.leading.equalTo(30)
-            make.trailing.equalTo(-30)
-        }
+    func bindViewModel() {
+        let input = DetailViewModel.Input(loadData: loadData.asSignal(onErrorJustReturn: ()))
+        let output = viewModel.transform(input: input)
         
+        output.loadData.bind(to: tableView.rx.items(cellIdentifier: "detailCell", cellType: DetailCell.self)) { (row, element, cell) in
+            cell.profileImage.image = UIImage(named: element.profileImage)
+            cell.shopNameLbl.text = element.name
+            cell.introduceLbl.text = element.introduce
+            cell.descriptionLbl.text = element.information
+            cell.shopImage.image = UIImage(named: element.shopImage)
+        }.disposed(by: disposeBag)
     }
+    
+    func setUI() {
+        backBtn.rx.tap.subscribe(onNext: { _ in
+            self.pushVC("mainVC")
+        }).disposed(by: disposeBag)
+    }
+    
+    func configureTableView() {
+        let nib = UINib(nibName: "DetailCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "detailCell")
+        tableView.rowHeight = 600
+    }
+    
+
     
     
 }
