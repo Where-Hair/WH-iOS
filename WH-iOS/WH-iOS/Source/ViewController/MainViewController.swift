@@ -34,7 +34,6 @@ class MainViewController: UIViewController {
         bindViewModel()
     }
     
-    
     func bindViewModel() {
         let input = MainViewModel.Input(loadData: loadData.asSignal(onErrorJustReturn: ()))
         let output = viewModel.transform(input: input)
@@ -49,6 +48,14 @@ class MainViewController: UIViewController {
             }).disposed(by: self.disposeBag)
         }.disposed(by: disposeBag)
     
+    }
+    
+    func setUI() {
+        let cell = MainCell()
+        
+        cell.detailBtn.rx.tap.subscribe(onNext: { _ in
+            self.pushVC("detailVC")
+        }).disposed(by: disposeBag)
     }
 
     func configureTableView() {
