@@ -50,6 +50,7 @@ class PostViewController: UIViewController {
         
         addBtn.rx.tap.subscribe(onNext: { _ in
             self.alert("성공", "등록되었습니다❗️")
+            self.pushVC("mainVC")
         }).disposed(by: disposeBag)
         
         addBtn.layer.cornerRadius = 15
