@@ -24,7 +24,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +31,13 @@ class MainViewController: UIViewController {
         
         configureTableView()
         bindViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+
+        loadData.accept(())
+        tableView.reloadData()
     }
     
     func bindViewModel() {
