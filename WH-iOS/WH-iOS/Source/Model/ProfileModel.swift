@@ -8,6 +8,6 @@
 import Foundation
 
 struct ProfileModel: Codable {
-    let image: String
+    let profileImage: String
     let nickname: String
 }
