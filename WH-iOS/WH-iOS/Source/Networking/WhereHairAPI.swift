@@ -19,7 +19,7 @@ enum WhereHairAPI {
 
 extension WhereHairAPI: TargetType {
     var baseURL: URL {
-        return URL(string: "/api")!
+        return URL(string: "http://localhost:3000")!
     }
     
     var path: String {
