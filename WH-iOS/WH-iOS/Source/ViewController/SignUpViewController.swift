@@ -34,17 +34,18 @@ class SignUpViewController: UIViewController {
         
         passwordTxtField.isSecureTextEntry = true
         
+        bindViewModel()
         setUI()
-
     }
     
     func setUI() {
         signUpBtn.rx.tap.subscribe(onNext: { _ in
-            self.pushVC("signInVC")
-        })
+            self.alert("성공", "회원가입에 성공하였습니다")
+        }).disposed(by: disposeBag)
+        
         signInBtn.rx.tap.subscribe(onNext: { _ in
             self.pushVC("signInVC")
-        })
+        }).disposed(by: disposeBag)
         
         signUpBtn.layer.cornerRadius = 15
         nicknameTxtField.underLine()
@@ -62,7 +63,7 @@ class SignUpViewController: UIViewController {
         
         output.isEnable.drive(signUpBtn.rx.isEnabled).disposed(by: disposeBag)
         output.result.emit(onNext: { _ in
-            self.pushVC("mainVC")
+            self.pushVC("signInVC")
         }).disposed(by: disposeBag)
     }
     
