@@ -15,6 +15,9 @@ import Then
 class ProfileViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
+    private let viewModel = ProfileViewModel()
+    
+    private let loadData = BehaviorRelay<Void>(value: ())
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileBtn: UIButton!
@@ -26,9 +29,16 @@ class ProfileViewController: UIViewController {
         setUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        loadData.accept(())
+    }
+    
     func setUI() {
+        profileImage.layer.cornerRadius = profileImage.frame.height/2
+        profileImage.layer.borderWidth = 0.8
         profileImage.layer.borderColor = UIColor.black.cgColor
-        profileImage.clipsToBounds = true
         
         profileBtn.rx.tap.subscribe(onNext: { _ in
             let imagePicker = UIImagePickerController()
@@ -39,7 +49,13 @@ class ProfileViewController: UIViewController {
     }
     
     func bindViewModel() {
+        let input = ProfileViewModel.Input(loadData: loadData.asSignal(onErrorJustReturn: ()))
+        let output = viewModel.transform(input: input)
         
+        output.loadData.bind{ [unowned self] result in
+            profileImage.image? = UIImage(named: result?.profileImage ?? "") ?? UIImage(named: "profile") as! UIImage
+            nicknameLbl.text = result?.nickname
+        }.disposed(by: disposeBag)
     }
     
 }
