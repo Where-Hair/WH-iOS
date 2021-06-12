@@ -75,3 +75,12 @@ extension WhereHairAPI: TargetType {
         }
     }
 }
+
+enum Network: Int, Error {
+    case success = 200
+    case ok = 201
+    case forbidden = 403
+    case notFound = 404
+    case conflict = 409
+    case fail
+}
