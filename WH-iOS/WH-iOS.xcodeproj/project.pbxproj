@@ -57,8 +57,8 @@
 		9F6BEBAE262842FF000BC386 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9F6BEBB126284688000BC386 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		9F8311CF262EEF20005B484E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		9F8311D8262FF2EF005B484E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ViewController/DetailViewController.swift; sourceTree = "<group>"; };
-		9F8311DB262FF31B005B484E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ViewController/ProfileViewController.swift; sourceTree = "<group>"; };
+		9F8311D8262FF2EF005B484E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9F8311DB262FF31B005B484E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9F839B2A26437AE50062089C /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		9F839B2B26437AE50062089C /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		9F839B2E2643D57C0062089C /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
@@ -72,10 +72,10 @@
 		9F8403402611E99100F6973B /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		9F840367261301A900F6973B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9F8403892613076400F6973B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		9F84048B26156B0700F6973B /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = ViewController/PostViewController.swift; sourceTree = "<group>"; };
-		9F84048F2616019C00F6973B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewController/MainViewController.swift; sourceTree = "<group>"; };
-		9F8404922616025200F6973B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ViewController/SignInViewController.swift; sourceTree = "<group>"; };
-		9F8404952616027100F6973B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ViewController/SignUpViewController.swift; sourceTree = "<group>"; };
+		9F84048B26156B0700F6973B /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		9F84048F2616019C00F6973B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9F8404922616025200F6973B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9F8404952616027100F6973B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9F88CEBE261E83E80081BB5C /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		9F88CEC3261E84350081BB5C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		9F88CED4261E9D540081BB5C /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
@@ -167,6 +167,59 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		9F85846926750917007A5B49 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9F85846E26750956007A5B49 /* Detail */,
+				9F85846D26750945007A5B49 /* Post */,
+				9F85846C2675093F007A5B49 /* Profile */,
+				9F85846B26750939007A5B49 /* Main */,
+				9F85846A2675092C007A5B49 /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9F85846A2675092C007A5B49 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				9F8404952616027100F6973B /* SignUpViewController.swift */,
+				9F8404922616025200F6973B /* SignInViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		9F85846B26750939007A5B49 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9F84048F2616019C00F6973B /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9F85846C2675093F007A5B49 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9F8311DB262FF31B005B484E /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		9F85846D26750945007A5B49 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				9F84048B26156B0700F6973B /* PostViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		9F85846E26750956007A5B49 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9F8311D8262FF2EF005B484E /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		9F88CEBD261E833C0081BB5C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +240,7 @@
 		9FE4A0F9260AE21800D668F0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				9F85846926750917007A5B49 /* Modules */,
 				9F88CEBD261E833C0081BB5C /* Manager */,
 				9F8403362611DFD200F6973B /* Util */,
 				9FE4A100260AE26600D668F0 /* Application */,
@@ -194,7 +248,6 @@
 				9FE4A0FF260AE26000D668F0 /* Model */,
 				9FE4A0FE260AE25500D668F0 /* Networking */,
 				9FE4A0FD260AE24900D668F0 /* Service */,
-				9FE4A0FC260AE23D00D668F0 /* ViewController */,
 				9FE4A0FB260AE23700D668F0 /* ViewModel */,
 			);
 			path = Source;
@@ -223,19 +276,6 @@
 				9F839B2E2643D57C0062089C /* PostViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		9FE4A0FC260AE23D00D668F0 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				9F84048B26156B0700F6973B /* PostViewController.swift */,
-				9F84048F2616019C00F6973B /* MainViewController.swift */,
-				9F8404922616025200F6973B /* SignInViewController.swift */,
-				9F8404952616027100F6973B /* SignUpViewController.swift */,
-				9F8311D8262FF2EF005B484E /* DetailViewController.swift */,
-				9F8311DB262FF31B005B484E /* ProfileViewController.swift */,
-			);
-			name = ViewController;
 			sourceTree = "<group>";
 		};
 		9FE4A0FD260AE24900D668F0 /* Service */ = {
