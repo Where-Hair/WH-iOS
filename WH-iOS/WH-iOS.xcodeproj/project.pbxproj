@@ -27,7 +27,6 @@
 		9F84033D2611E0BD00F6973B /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84033B2611E0BD00F6973B /* MainCell.swift */; };
 		9F84033E2611E0BD00F6973B /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F84033C2611E0BD00F6973B /* MainCell.xib */; };
 		9F8403412611E99200F6973B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8403402611E99100F6973B /* UITextField.swift */; };
-		9F8403652613003300F6973B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8403642613003300F6973B /* Network.swift */; };
 		9F840368261301A900F6973B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F840367261301A900F6973B /* Service.swift */; };
 		9F84038A2613076400F6973B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8403892613076400F6973B /* UIViewController.swift */; };
 		9F84048C26156B0700F6973B /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F84048B26156B0700F6973B /* PostViewController.swift */; };
@@ -71,7 +70,6 @@
 		9F84033B2611E0BD00F6973B /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		9F84033C2611E0BD00F6973B /* MainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
 		9F8403402611E99100F6973B /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
-		9F8403642613003300F6973B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		9F840367261301A900F6973B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9F8403892613076400F6973B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9F84048B26156B0700F6973B /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = ViewController/PostViewController.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 		9FE4A0FE260AE25500D668F0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				9F8403642613003300F6973B /* Network.swift */,
 				9FE4A109260AE2B700D668F0 /* WhereHairAPI.swift */,
 			);
 			path = Networking;
@@ -421,7 +418,6 @@
 				9F8403412611E99200F6973B /* UITextField.swift in Sources */,
 				9F84033D2611E0BD00F6973B /* MainCell.swift in Sources */,
 				9F840368261301A900F6973B /* Service.swift in Sources */,
-				9F8403652613003300F6973B /* Network.swift in Sources */,
 				9F88CED9261EA51D0081BB5C /* StoregaeManager.swift in Sources */,
 				9F84048C26156B0700F6973B /* PostViewController.swift in Sources */,
 				9F6BEBA62627D669000BC386 /* ProfileViewModel.swift in Sources */,
